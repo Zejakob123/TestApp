@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/id_token_mode_sign_in_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="40dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/huawei_btn"
+        android:text="ID-Token Sign In"
+        android:theme="@style/huawei_btn_style"
+        app:layout_constraintBottom_toBottomOf="@+id/autho_mode_sign_int_btn"
+        app:layout_constraintEnd_toEndOf="@+id/autho_mode_sign_int_btn"
+        app:layout_constraintStart_toStartOf="@+id/autho_mode_sign_int_btn"
+        app:layout_constraintTop_toTopOf="@+id/view2" />
+
+    <Button
+        android:id="@+id/autho_mode_sign_int_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="8dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/huawei_btn"
+        android:text="AuthorizationCode SignIn"
+        android:theme="@style/huawei_btn_style"
+        app:layout_constraintBottom_toBottomOf="@+id/silent_sign_in_btn"
+        app:layout_constraintEnd_toEndOf="@+id/silent_sign_in_btn"
+        app:layout_constraintStart_toStartOf="@+id/silent_sign_in_btn"
+        app:layout_constraintTop_toTopOf="@+id/id_token_mode_sign_in_btn" />
+
+    <Button
+        android:id="@+id/silent_sign_in_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="16dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/huawei_btn"
+        android:text="Silent Sign in"
+        android:theme="@style/huawei_btn_style"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_out_btn"
+        app:layout_constraintEnd_toEndOf="@+id/sign_out_btn"
+        app:layout_constraintStart_toStartOf="@+id/sign_out_btn"
+        app:layout_constraintTop_toTopOf="@+id/autho_mode_sign_int_btn" />
+
+    <Button
+        android:id="@+id/sign_out_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        android:layout_marginBottom="8dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/huawei_btn"
+        android:text="Sign Out"
+        android:theme="@style/huawei_btn_style"
+        app:layout_constraintBottom_toBottomOf="@+id/cancel_autho_btn"
+        app:layout_constraintEnd_toEndOf="@+id/cancel_autho_btn"
+        app:layout_constraintStart_toStartOf="@+id/cancel_autho_btn"
+        app:layout_constraintTop_toTopOf="@id/silent_sign_in_btn" />
+
+    <Button
+        android:id="@+id/cancel_autho_btn"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_margin="5dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/huawei_btn"
+        android:text="Cancel Authorization"
+        android:theme="@style/huawei_btn_style"
+        app:layout_constraintBottom_toBottomOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view2"
+        app:layout_constraintStart_toStartOf="@+id/view2"
+        app:strokeColor="#009C27B0" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="330dp"
+        android:layout_height="571dp"
+        android:backgroundTint="@color/white"
+        android:foregroundTint="#FAF7F7"
+        android:background="@drawable/layered_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="330dp"
+        android:layout_height="300dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/view1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="90dp"
+        android:visibility="visible"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@+id/view1"
+        android:src="@drawable/huawei_logo" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginEnd="120dp"
+        android:text="Huawei Account Kit"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/view2"
+        app:layout_constraintEnd_toEndOf="@+id/view1"
+        app:layout_constraintStart_toStartOf="@+id/view1"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
